@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -17,6 +20,7 @@ public class CadastroSenhaActivity extends AppCompatActivity {
     private TextInputEditText senha;
     private TextInputEditText url;
     private TextInputEditText observacao;
+    private Button saveButton;
     private AppDatabase db;
 
     @Override
@@ -30,11 +34,37 @@ public class CadastroSenhaActivity extends AppCompatActivity {
         senha = (TextInputEditText)findViewById(R.id.cadSenhaEditTextInput);
         url = (TextInputEditText)findViewById(R.id.cadUrlEditTextInput);
         observacao = (TextInputEditText)findViewById(R.id.cadObservacaoEditTextInput);
+        saveButton = findViewById(R.id.loginButton);
+
+        nome.addTextChangedListener(validarCamposVazios);
+        usuario.addTextChangedListener(validarCamposVazios);
+        senha.addTextChangedListener(validarCamposVazios);
     }
+
+    private TextWatcher validarCamposVazios = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String nomeCheck = nome.getText().toString().trim();
+            String usuarioCheck = usuario.getText().toString().trim();
+            String senhaCheck = senha.getText().toString().trim();
+
+            saveButton.setEnabled(!nomeCheck.isEmpty() && !usuarioCheck.isEmpty() && !senhaCheck.isEmpty());
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 
     public void cadastrarSenha(View view) {
 
-        final Senha senha = new Senha(
+            final Senha senha = new Senha(
                 nome.getText().toString(),
                 usuario.getText().toString(),
                 this.senha.getText().toString(),

@@ -72,14 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void novoCadastro(View view){
-
-        if(Hawk.contains("usuario")){
-            Toast.makeText(this,"Usuário já cadastrado!",Toast.LENGTH_SHORT).show();
-        }else{
             Intent intent = new Intent(this, CadastroUsuarioActivity.class);
             startActivity(intent);
-        }
-
-
     }
 }

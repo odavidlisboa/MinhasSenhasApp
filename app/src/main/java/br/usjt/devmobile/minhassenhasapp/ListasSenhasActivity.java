@@ -40,7 +40,6 @@ public class ListasSenhasActivity extends AppCompatActivity {
                 Senha senhaSelecionada = listaSenhas.get(position);
                 Toast.makeText(ListasSenhasActivity.this,"Senha selecionada: "
                         +senhaSelecionada.getNome(),Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(ListasSenhasActivity.this, DetalhesSenhaActivity.class);
                 intent.putExtra("senha",senhaSelecionada);
                 startActivity(intent);

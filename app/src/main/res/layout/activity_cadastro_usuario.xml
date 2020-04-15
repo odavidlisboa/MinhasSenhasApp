@@ -137,7 +137,8 @@
             android:text="Cadastrar"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:enabled="false"/>
 
      </RelativeLayout>
 

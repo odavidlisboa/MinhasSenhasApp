@@ -43,6 +43,74 @@
             android:id="@+id/textViewNomeValue"
             android:text="Nome da Senha"/>
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewUsuarioLabel"
+            android:text="Usuario:"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewUsuarioValue"
+            android:text="Usuario da Senha"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewSenhaLabel"
+            android:text="Senha:"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewSenhaValue"
+            android:text="Senha"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewUrlLabel"
+            android:text="Url:"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewUrlValue"
+            android:text="Url"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewObservacaoLabel"
+            android:text="Observacao:"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewObservacaoValue"
+            android:text="Observacao"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
